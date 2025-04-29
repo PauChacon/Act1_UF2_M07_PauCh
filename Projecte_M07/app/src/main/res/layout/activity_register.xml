@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registro"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Usuario -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre de usuario"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editTextRegisterUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Introduce tu usuario"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="16dp" />
+
+
+        <!-- Teléfono -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Teléfono"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editTextRegisterPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Introduce tu número"
+            android:inputType="phone"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Correo electrónico"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editTextRegisterEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ejemplo@correo.com"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="16dp" />
+
+
+
+        <!-- Contraseña -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contraseña"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editTextRegisterPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña segura"
+            android:inputType="textPassword"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Confirmación de contraseña -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirmar contraseña"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editTextRegisterConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Repite tu contraseña"
+            android:inputType="textPassword"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Botón de Registro -->
+        <Button
+            android:id="@+id/buttonConfirmRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="Registrarse" />
+
+        <TextView
+            android:id="@+id/textViewRegisterError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Error de validación"
+            android:textColor="@android:color/white"
+            android:background="#F27581"
+            android:padding="8dp"
+            android:visibility="gone"
+            android:textSize="14sp"
+            android:gravity="center" />
+
+    </LinearLayout>
+</ScrollView>
