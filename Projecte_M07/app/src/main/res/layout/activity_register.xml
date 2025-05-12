@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:padding="24dp">
 
     <LinearLayout
@@ -15,18 +16,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Registro"
-            android:textSize="32sp"
+            android:textSize="28sp"
             android:textStyle="bold"
-            android:layout_marginTop="30dp"
+            android:textColor="@color/green_primary"
+            android:layout_marginTop="50dp"
             android:layout_marginBottom="32dp" />
 
-        <!-- Usuario -->
+        <!-- Campo: Usuario -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nombre de usuario"
-            android:textSize="16sp" />
-
+            android:textColor="@color/gray_dark"
+            android:textSize="14sp" />
         <EditText
             android:id="@+id/editTextRegisterUsername"
             android:layout_width="match_parent"
@@ -35,14 +37,13 @@
             android:inputType="textPersonName"
             android:layout_marginBottom="16dp" />
 
-
-        <!-- Teléfono -->
+        <!-- Campo: Teléfono -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Teléfono"
-            android:textSize="16sp" />
-
+            android:textColor="@color/gray_dark"
+            android:textSize="14sp" />
         <EditText
             android:id="@+id/editTextRegisterPhone"
             android:layout_width="match_parent"
@@ -51,12 +52,13 @@
             android:inputType="phone"
             android:layout_marginBottom="16dp" />
 
+        <!-- Campo: Email -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Correo electrónico"
-            android:textSize="16sp" />
-
+            android:textColor="@color/gray_dark"
+            android:textSize="14sp" />
         <EditText
             android:id="@+id/editTextRegisterEmail"
             android:layout_width="match_parent"
@@ -65,15 +67,13 @@
             android:inputType="textEmailAddress"
             android:layout_marginBottom="16dp" />
 
-
-
-        <!-- Contraseña -->
+        <!-- Campo: Contraseña -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Contraseña"
-            android:textSize="16sp" />
-
+            android:textColor="@color/gray_dark"
+            android:textSize="14sp" />
         <EditText
             android:id="@+id/editTextRegisterPassword"
             android:layout_width="match_parent"
@@ -82,13 +82,13 @@
             android:inputType="textPassword"
             android:layout_marginBottom="16dp" />
 
-        <!-- Confirmación de contraseña -->
+        <!-- Campo: Confirmar contraseña -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Confirmar contraseña"
-            android:textSize="16sp" />
-
+            android:textColor="@color/gray_dark"
+            android:textSize="14sp" />
         <EditText
             android:id="@+id/editTextRegisterConfirmPassword"
             android:layout_width="match_parent"
@@ -98,24 +98,25 @@
             android:layout_marginBottom="24dp" />
 
         <!-- Botón de Registro -->
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonConfirmRegister"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:text="Registrarse" />
+            android:layout_height="50dp"
+            android:text="Registrarse"
+            style="@style/GreenBorderButton"
+            android:layout_marginBottom="24dp" />
 
+        <!-- Mensaje de error -->
         <TextView
             android:id="@+id/textViewRegisterError"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Error de validación"
             android:textColor="@android:color/white"
-            android:background="#F27581"
+            android:background="@color/error_red"
             android:padding="8dp"
             android:visibility="gone"
             android:textSize="14sp"
             android:gravity="center" />
-
     </LinearLayout>
 </ScrollView>

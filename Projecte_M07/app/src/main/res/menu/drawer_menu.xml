@@ -1,0 +1,4 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_settings" android:title="Ajustes" android:icon="@drawable/settings_icon" />
+    <item android:id="@+id/nav_terms" android:title="Condiciones de uso" android:icon="@drawable/termsofuseicon" />
+</menu>

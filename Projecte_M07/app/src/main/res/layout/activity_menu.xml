@@ -1,15 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <TextView
+    <!-- Contenido principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="16dp">
+
+        <!-- Cabecera -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mis Hábitos"
+                android:textSize="24sp"
+                android:layout_marginTop="50dp"
+                android:textStyle="bold"
+                android:textColor="@color/green_primary"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:id="@+id/buttonMenu"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_menu"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="Abrir menú"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"/>
+
+
+        </RelativeLayout>
+
+        <!-- Lista de hábitos en scroll -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@color/beix"
+                android:layout_gravity="center"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                android:backgroundTint="@android:color/white">
+
+                <LinearLayout
+                    android:id="@+id/habitsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/beix"
+
+                    android:padding="16dp">
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Beber 2L de agua"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray_dark"
+
+                        android:padding="8dp" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Caminar 30 minutos"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray_dark"
+                        android:padding="8dp" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Leer 10 páginas"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray_dark"
+                        android:padding="8dp" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dormir 8 horas"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray_dark"
+                        android:padding="8dp" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No usar redes sociales 1 hora antes de dormir"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray_dark"
+                        android:padding="8dp" />
+
+                    <CheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Meditar 5 minutos"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray_dark"
+                        android:padding="8dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </ScrollView>
+
+        <!-- Botón para editar hábitos -->
+            <androidx.appcompat.widget.AppCompatButton
+
+            android:id="@+id/buttonEditHabits"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Editar Hábitos"
+                style="@style/GreenBorderButton"
+            android:layout_marginBottom="30dp"
+                android:layout_marginTop="16dp" />
+    </LinearLayout>
+
+    <!-- Menú lateral -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Menu"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="32dp" />
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        app:menu="@menu/drawer_menu"
+        app:itemIconSize="24dp"
+        app:headerLayout="@layout/drawer_header" />
+</androidx.drawerlayout.widget.DrawerLayout>
