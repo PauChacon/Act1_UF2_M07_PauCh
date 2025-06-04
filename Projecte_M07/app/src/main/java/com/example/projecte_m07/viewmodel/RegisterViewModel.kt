@@ -36,6 +36,11 @@ class RegisterViewModel : ViewModel() {
             _error.value = "Les contrasenyes no coincideixen"
             return false
         }
+        if (username.length > 25) {
+            _error.value = "El nom d'usuari ha de tenir menys de 25 caràcters"
+            return false
+        }
+
 
         return true
     }

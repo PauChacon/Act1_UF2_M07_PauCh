@@ -71,6 +71,10 @@ class Register : AppCompatActivity() {
         if (user.length <= 3) {
             showError("El nombre de usuario debe tener más de 3 caracteres", username)
             isValid = false
+        }else if(user.length>=26){
+            showError("El nombre de usuario debe tener menos de 25 caracteres", username)
+            isValid = false
+
         } else if (!tel.matches(Regex("^\\d{9}$"))) {
             showError("El número de teléfono debe tener exactamente 9 cifras", phone)
             isValid = false

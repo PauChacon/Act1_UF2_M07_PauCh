@@ -6,6 +6,7 @@
     <color name="green_primary">#FF007C4C</color>
     <color name="error_red">#F27581</color>
     <color name="beix">#E6DBC6</color>
+    <color name="light_orange">#FAB743</color>
 
 
 
@@ -18,5 +19,10 @@
     <!-- Optional Accents (still minimal) -->
     <color name="green_light">#FF4FB98C</color>
     <color name="green_dark">#FF005F3A</color>
+
+    <color name="switch_green">#4CAF50</color>
+    <color name="switch_green_light">#81C784</color>
+
+
 
 </resources>
